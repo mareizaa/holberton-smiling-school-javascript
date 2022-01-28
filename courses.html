@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>SmileSchool</title>
+  <!--GOOGLE FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
+  <!--JQUERY-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--BOOTSTRAP-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!--OWN STYLES-->
+  <link rel="stylesheet" href="styles.css">
+  <!--OWN SCRIPTS-->
+  <script src="scripts.js"></script>
+</head>
+<body>
+  <!--HEADER-->
+  <header class="header-courses">
+    <!--CONTAINER-->
+    <div class="container-xl container-md container px-0">
+      <div class="row w-100 pt-2 ps-sm-0">
+          <!--LOGO-->
+          <div class="col-12 col-sm-7 col-xl-6 pt-5 px-0">
+            <div class="row text-center text-sm-left">
+              <a href="homepage.html" class="col-12 col-sm-1 my-sm-auto">
+                <img src="images/smile_off.png" alt="Logo" width="30" height="30" >
+              </a>
+              <a href="homepage.html" class="col-12 col-sm-1 my-sm-auto mt-1">
+                <img src="images/logo.png" alt="Logo" width="111" height="30" class="pt-2 pl-sm-2">
+              </a>
+            </div>
+          </div>
+          <!--ICON MENU-->
+          <span class="hbicon-hearing float-left position-absolute pt-5 pl-5 d-sm-none btn" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"></span>            
+          <!--MENU-->
+          <nav class="nav col-12 col-sm-5 col-xl-6 pt-sm-5 d-sm-block collapse px-0" id="collapseExample">
+            <div class="w-100 d-sm-flex align-items-center justify-content-end ">
+              <a class="nav-link text-white font-weight-bold text-center color-smile pointer" href="courses.html"><span class="border-bottom">COURSES</span></a>
+              <a class="nav-link text-white font-weight-bold text-center pointer" href="pricing.html">PRICING</a>
+              <a class="nav-link text-white font-weight-bold text-center pointer">LOGIN</a>
+            </div>
+          </nav>
+      </div>
+      <!--TITLE-->
+      <div class="row w-100 mt-4 pb-5 d-sm-flex flex-column align-items-center d-none">
+        <h1 class="text-white font-weight-bold px-0 pt-2 mb-0 font-smileschool">« Don’t cry because it’s over. <br><span class="color-smile">Smile</span> because it happened. »</h1>
+      </div>
+  </header>
+  <main>
+    <!--FORM TO SEARCH-->
+    <section class="bg-smile">
+      <div class="container">
+        <!--FORM-->
+        <form class="py-5 row">
+          <!--SEARCH INPUT-->
+          <div class="form-group col-12 col-md-4">
+            <label for="keywords" class="text-uppercase font-weight-bold text-white">Keywords</label>
+            <div class="d-flex align-items-center mix-blend-normal py-1 px-2 bg-smile-input rounded-top">
+              <i class="hbicon-search" aria-hidden="true"></i>
+              <input type="text" class="form-control bg-transparent border-top-0 border-right-0 border-left-0 text-white place-holder" id="keywords" aria-describedby="keywords" placeholder="Search by keywords">
+            </div>
+          </div>
+          <!--DROPDOWN #1-->
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <label for="topic" class="text-uppercase font-weight-bold text-white">tOPIC</label>
+            <div class="d-flex align-items-center mix-blend-normal py-1 px-2 bg-smile-input rounded-top">
+              <input class="d-none" type="text" id="topicSelected">
+              <span id="topic" class="form-control bg-transparent border-0 text-start text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Novice</span>
+              <span class="dropdown-toggle text-white"></span>
+              <div class="dropdown-menu col-11 transformed-drop" id="topicInput">
+              </div>
+            </div>
+          </div>
+          <!--DROPDOWN #2-->
+          <div class="form-group col-12 col-sm-6 col-md-4">
+            <label for="sort" class="text-uppercase font-weight-bold text-white">SORT BY</label>
+            <div class="d-flex align-items-center mix-blend-normal py-1 px-2 bg-smile-input rounded-top">
+              <input class="d-none" type="text" id="sortSelected">
+              <span id="sort" class="form-control bg-transparent border-0 text-start text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Most popular</span>
+              <span class="dropdown-toggle text-white"></span>
+              <div class="dropdown-menu col-11 transformed-drop" id="sortbyInput">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!--RESULTS SECTION-->
+    <section>
+      <div class="container py-5">
+        <p class="color-grey-smile" id="numberOfVideos">10 videos</p>
+        <div class="row py-4" id="results">
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--FOOTER-->
+  <footer class="bg-smile-dark">
+    <div class="w-100 bg-smile-dark py-sm-5 pt-5 text-white d-flex justify-content-md-around justify-content-sm-between align-items-center flex-sm-row flex-column">
+      <!--LOGO-->
+      <div>
+        <a href="homepage.html" class="col-12 col-sm-1 pr-2">
+          <img src="images/smile_off.png" alt="Logo" width="30" height="30" >
+        </a>
+        <a href="homepage.html" class="col-12 col-sm-1 pl-0">
+          <img src="images/logo.png" alt="Logo" width="111" height="30">
+        </a>
+      </div>
+      <!--SOCIAL MEDIA-->
+      <div class="pr-sm-3 pr-md-0 mt-sm-0 mt-4">
+        <i class="hbicon-facebook mr-1 pointer"></i>
+        <i class="hbicon-twitter mx-1 pointer"></i>
+        <i class="hbicon-instagram ml-1 pointer"></i>
+      </div>
+    </div>
+    <!--COPY RIGHT-->
+    <div class="bg-smile-dark d-flex justify-content-center pt-5 pt-sm-0 pb-5">
+      <p class="font-weight-normal text-white mix-blend">©smileschool 2020</p>
+    </div>
+  </footer> 
+</body>
+</html>
